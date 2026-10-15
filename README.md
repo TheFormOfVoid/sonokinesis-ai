@@ -1,36 +1,36 @@
-# beatform-ai
+# sonokinesis-ai
 
-Let an AI build Just Shapes & Beats custom levels with [Beatform](https://github.com/TheFormOfVoid/beatform).
+Let an AI build Just Shapes & Beats custom levels with [Sonokinesis](https://github.com/TheFormOfVoid/sonokinesis).
 
-Plug an AI agent (Claude Code, Claude Desktop, or any client that speaks MCP) into Beatform and it can
+Plug an AI agent (Claude Code, Claude Desktop, or any client that speaks MCP) into Sonokinesis and it can
 make a level the way a person does in the editor: listen to the song, lay out hazards on the beat,
 write its own attacks and effects in code, check its work as pictures, and start the level in the game
 for you to play. This repository holds the instructions, setup and examples for that; the tool itself
-(`beatform`) comes with Beatform.
+(`sonokinesis`) comes with Sonokinesis.
 
 ## What you need
 
-- **Beatform** (the release zip): the editor, the `beatform` tool in `tools/`, the script library and
-  the docs. Install its loader into the game with `Install-Beatform.bat` if you want to play levels.
+- **Sonokinesis** (the release zip): the editor, the `sonokinesis` tool in `tools/`, the script library and
+  the docs. Install its loader into the game with `Install-Sonokinesis.bat` if you want to play levels.
 - **Just Shapes & Beats** on Steam, to play the levels (not needed to build them).
 - An **AI client with MCP support**.
 
 ## Setup
 
-1. Unzip the Beatform release next to this folder (or anywhere).
+1. Unzip the Sonokinesis release next to this folder (or anywhere).
 2. Double-click `setup.bat` in this folder (or run `.\setup.ps1` in PowerShell). It finds
-   `beatform.exe` (or pass `-Beatform C:\path\to\beatform.exe`), writes `.mcp.json`, creates
+   `sonokinesis.exe` (or pass `-Sonokinesis C:\path\to\sonokinesis.exe`), writes `.mcp.json`, creates
    `levels/`, and checks the game and the loader.
 3. Open your AI client here:
-   - **Claude Code**: run `claude` in this folder and approve the `beatform` server. Or add it yourself:
-     `claude mcp add beatform -- "C:\path\to\beatform.exe" mcp`.
+   - **Claude Code**: run `claude` in this folder and approve the `sonokinesis` server. Or add it yourself:
+     `claude mcp add sonokinesis -- "C:\path\to\sonokinesis.exe" mcp`.
    - **Claude Desktop** and other clients: add the server from `.mcp.json` to their MCP settings
-     (`"command": "C:\\path\\to\\beatform.exe", "args": ["mcp"]`).
+     (`"command": "C:\\path\\to\\sonokinesis.exe", "args": ["mcp"]`).
 4. Start with a prompt from [prompts/make-a-level.md](prompts/make-a-level.md). The first line asks the
    agent to read [AGENTS.md](AGENTS.md), its working instructions.
 
 Without MCP, an agent that can run commands can use the same tool from the shell:
-`beatform help` lists the commands (`beatform new-level`, `beatform render-sheet`, ...).
+`sonokinesis help` lists the commands (`sonokinesis new-level`, `sonokinesis render-sheet`, ...).
 
 ## What the agent can do
 
@@ -46,7 +46,7 @@ Without MCP, an agent that can run commands can use the same tool from the shell
 | play it | `play_in_game`, `game_status`, `game_screenshot` |
 | work with the editor open | `editor`, `editor_screenshot` |
 
-If the Beatform Editor is open on the same level, it reloads every time the agent changes it, so you
+If the Sonokinesis Editor is open on the same level, it reloads every time the agent changes it, so you
 can watch the level being built and fix things by hand in between.
 
 ## Examples
@@ -57,10 +57,10 @@ can watch the level being built and fix things by hand in between.
 
 ## Docs
 
-`docs/` has a copy of Beatform's guides for agents that read files: [ai-guide](docs/ai-guide.md) (start
+`docs/` has a copy of Sonokinesis's guides for agents that read files: [ai-guide](docs/ai-guide.md) (start
 here), [level-format](docs/level-format.md), [scripting](docs/scripting.md), [ai-tools](docs/ai-tools.md)
-and [editor-guide](docs/editor-guide.md). The `docs` tool serves the same guides from the Beatform you
-installed. `sync-docs.ps1` refreshes the copy from a Beatform checkout
+and [editor-guide](docs/editor-guide.md). The `docs` tool serves the same guides from the Sonokinesis you
+installed. `sync-docs.ps1` refreshes the copy from a Sonokinesis checkout
 (`powershell -ExecutionPolicy Bypass -File sync-docs.ps1`).
 
 ## Good to know
@@ -68,8 +68,8 @@ installed. `sync-docs.ps1` refreshes the copy from a Beatform checkout
 - Levels the agent makes go in `levels/` (ignored by git: songs are usually not yours to publish).
 - Only use songs you have the right to use, and don't copy art, sounds or levels from the game or
   from other people.
-- Beatform is an unofficial fan project, not affiliated with or endorsed by Berzerk Studio.
+- Sonokinesis is an unofficial fan project, not affiliated with or endorsed by Berzerk Studio.
 
 ## License
 
-GPL-3.0, like Beatform ([LICENSE](LICENSE)). The example level's song is Beatform's own demo track.
+GPL-3.0, like Sonokinesis ([LICENSE](LICENSE)). The example level's song is Sonokinesis's own demo track.

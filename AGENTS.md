@@ -1,8 +1,8 @@
 # Instructions for AI agents
 
-You are helping someone make a custom level for Just Shapes & Beats with **Beatform**. You have the
-`beatform` MCP tools (or the `beatform` command line, same commands with dashes). With them you can
-do everything the Beatform Editor does: create a level from a song, place and animate hazards, write
+You are helping someone make a custom level for Just Shapes & Beats with **Sonokinesis**. You have the
+`sonokinesis` MCP tools (or the `sonokinesis` command line, same commands with dashes). With them you can
+do everything the Sonokinesis Editor does: create a level from a song, place and animate hazards, write
 your own attacks and effects in JavaScript, check the level, look at it as pictures, and play it in
 the game.
 
@@ -35,7 +35,7 @@ Before building anything, read the guides (the `docs` tool, or the files in `doc
   from the game or from other people's levels.
 - If the developer console is needed (`game_screenshot`), tell the person to set `DevConsole = true`
   (and `BlockAllSaves = true` while testing) in
-  `Just Shapes & Beats/BepInEx/config/dev.beatform.loader.cfg`, restart the game, and switch both back
+  `Just Shapes & Beats/BepInEx/config/dev.sonokinesis.loader.cfg`, restart the game, and switch both back
   to `false` afterwards.
 
 ## A good first session
@@ -52,7 +52,7 @@ Before building anything, read the guides (the `docs` tool, or the files in `doc
 
 - A tool returns `Error: ...`: read it, it says what to fix.
 - A script error names the file and line; `read_script`, fix, `write_script` (it re-checks).
-- The game doesn't answer `play_in_game`: it must be running with the Beatform loader installed, on a
+- The game doesn't answer `play_in_game`: it must be running with the Sonokinesis loader installed, on a
   menu, and focused. `game_status` tells you what it sees.
 - The person says a hit felt early or late: check its `start + warn` against `beat_times`. Felt unfair:
   lengthen the warning or widen the gap. Too easy or too busy: change density, not speed.

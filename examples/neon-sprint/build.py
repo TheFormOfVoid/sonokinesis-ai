@@ -1,7 +1,7 @@
-"""Builds the Neon Sprint example with the beatform tool, the way an AI agent does it through MCP.
+"""Builds the Neon Sprint example with the sonokinesis tool, the way an AI agent does it through MCP.
 
-Run from this folder:  python build.py  [path to beatform]
-It starts from the level created by `beatform new-level` (level.json + song.ogg) and the custom script
+Run from this folder:  python build.py  [path to sonokinesis]
+It starts from the level created by `sonokinesis new-level` (level.json + song.ogg) and the custom script
 in scripts/, removes everything else, and lays the level out section by section.
 """
 import json
@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-BEATFORM = sys.argv[1] if len(sys.argv) > 1 else "beatform"
+SONOKINESIS = sys.argv[1] if len(sys.argv) > 1 else "sonokinesis"
 BEAT = 60000 / 128          # 468.75 ms: the song is 128 BPM with its first beat at 0
 BAR = BEAT * 4
 
@@ -21,7 +21,7 @@ def b(bar, beat=0.0):
 
 
 def run(cmd, *args, **opts):
-    argv = [BEATFORM, cmd, HERE, *args]
+    argv = [SONOKINESIS, cmd, HERE, *args]
     for k, v in opts.items():
         argv += ["--" + k, v if isinstance(v, str) else json.dumps(v)]
     out = subprocess.run(argv, capture_output=True, text=True, encoding="utf-8")
@@ -44,14 +44,14 @@ def obj(name, shape, start, end, warn=0, outro=0, **tracks):
 # Start clean (keeps meta, theme and the song).
 edit({"op": "remove", "from": -1e9, "to": 1e9}, {"op": "removeEvents"},
      {"op": "checkpoints", "set": [b(9), b(17), b(25), b(29)]},
-     {"op": "meta", "set": {"author": "Beatform example", "difficulty": 2,
-                            "description": "An example level built entirely with the beatform tool."}})
+     {"op": "meta", "set": {"author": "Sonokinesis example", "difficulty": 2,
+                            "description": "An example level built entirely with the sonokinesis tool."}})
 
 # ---- Bars 1-8: intro. A title, decorative pulses, then rain on the off-beats. ----
 edit({"op": "add", "objects": [
     {**obj("title", {"type": "text", "text": "NEON SPRINT"}, 0, b(3), outro=400,
            x=0, y=-40, h=[[0, 76], [b(3), 82]]), "hitbox": False, "color": "#ffffff"},
-    {**obj("subtitle", {"type": "text", "text": "a beatform example", "bold": False}, b(1, 1), b(3), outro=400,
+    {**obj("subtitle", {"type": "text", "text": "a sonokinesis example", "bold": False}, b(1, 1), b(3), outro=400,
            x=0, y=40, h=26), "hitbox": False, "color": "#33e5ff"},
 ]})
 run("add-pattern", "pulse", at=str(b(1)), params={"beats": 16, "size": 300, "color": "#33e5ff"})

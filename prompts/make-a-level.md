@@ -3,7 +3,7 @@
 Copy this into your AI client, fill in the blanks, and attach or point to your song.
 
 ```
-Read AGENTS.md, then make a Beatform level for my song.
+Read AGENTS.md, then make a Sonokinesis level for my song.
 
 Song file: C:\path\to\song.ogg
 Title / artist: ...

@@ -1,5 +1,5 @@
 {
   "mcpServers": {
-    "beatform": { "command": "C:\\path\\to\\beatform.exe", "args": ["mcp"] }
+    "sonokinesis": { "command": "C:\\path\\to\\sonokinesis.exe", "args": ["mcp"] }
   }
 }

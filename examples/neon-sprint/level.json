@@ -1,12 +1,12 @@
 {
-  "format": "beatform.level",
+  "format": "sonokinesis.level",
   "formatVersion": 2,
   "meta": {
     "id": "lvl-2d42973d01e7",
     "title": "Neon Sprint",
-    "artist": "Beatform",
-    "author": "Beatform example",
-    "description": "An example level built entirely with the beatform tool.",
+    "artist": "Sonokinesis",
+    "author": "Sonokinesis example",
+    "description": "An example level built entirely with the sonokinesis tool.",
     "audio": "song.ogg",
     "bpm": 128,
     "beatsPerBar": 4,
@@ -81,7 +81,7 @@
       "name": "subtitle",
       "shape": {
         "type": "text",
-        "text": "a beatform example",
+        "text": "a sonokinesis example",
         "bold": false
       },
       "start": 468.75,
@@ -110,7 +110,7 @@
         "w": [
           [
             0,
-            376.7
+            420.9
           ]
         ]
       },

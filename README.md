@@ -18,13 +18,8 @@ for you to play. This repository holds the instructions, setup and examples for 
 ## Setup
 
 1. Unzip the Beatform release next to this folder (or anywhere).
-2. In this folder, run:
-
-   ```powershell
-   .\setup.ps1
-   ```
-
-   It finds `beatform.exe` (or pass `-Beatform C:\path\to\beatform.exe`), writes `.mcp.json`, creates
+2. Double-click `setup.bat` in this folder (or run `.\setup.ps1` in PowerShell). It finds
+   `beatform.exe` (or pass `-Beatform C:\path\to\beatform.exe`), writes `.mcp.json`, creates
    `levels/`, and checks the game and the loader.
 3. Open your AI client here:
    - **Claude Code**: run `claude` in this folder and approve the `beatform` server. Or add it yourself:
@@ -65,7 +60,8 @@ can watch the level being built and fix things by hand in between.
 `docs/` has a copy of Beatform's guides for agents that read files: [ai-guide](docs/ai-guide.md) (start
 here), [level-format](docs/level-format.md), [scripting](docs/scripting.md), [ai-tools](docs/ai-tools.md)
 and [editor-guide](docs/editor-guide.md). The `docs` tool serves the same guides from the Beatform you
-installed. `sync-docs.ps1` refreshes the copy from a Beatform checkout.
+installed. `sync-docs.ps1` refreshes the copy from a Beatform checkout
+(`powershell -ExecutionPolicy Bypass -File sync-docs.ps1`).
 
 ## Good to know
 

@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "beatform": { "command": "C:\\path\\to\\beatform.exe", "args": ["mcp"] }
+  }
+}

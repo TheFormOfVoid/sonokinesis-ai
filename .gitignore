@@ -1,0 +1,8 @@
+# Machine-specific MCP config (made by setup.ps1)
+.mcp.json
+
+# Levels you make (songs are usually not yours to publish)
+levels/
+
+*.bak
+level.autosave.json

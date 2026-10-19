@@ -23,7 +23,7 @@ play, and how to check your work. Read [level-format](level-format.md) for every
    is the real test: ask them what felt unfair, late, early, too easy or too busy, and change that.
 7. Repeat for the next section. Keep `level_info` handy to see what is already there.
 
-If the Sonokinesis Editor is open on the same folder, it reloads whenever you change `level.json` or a
+If the Sonokinesis editor is open on the same folder, it reloads whenever you change `level.json` or a
 script (as long as it has no unsaved edits of its own), so the person can watch the level grow.
 
 ## The format in practice
@@ -129,6 +129,7 @@ From the library (see `list_scripts` for every setting):
 | `homing_orb` chases, then bursts into shards | `zoom_pulse` zoom punch every beat | `shockwave` an expanding ring |
 | `laser_sweep` a beam that pivots | `custom_sway` rocking camera | `wall` a sweeping wall with a gap |
 | `bouncing_balls` gravity balls | `screen_shake` | `laser` warning line, then beam |
+| | `beat_bump` camera dips on a beat pattern | |
 | `shard` a flying triangle | `beat_flash` a flash every beat | `spinner` arms around a hub |
 | | `vhs_rewind` tape-rewind look, players frozen | `spiral`, `rain`, `bouncer`, `pulse` |
 

@@ -10,14 +10,15 @@ for you to play. This repository holds the instructions, setup and examples for 
 
 ## What you need
 
-- **Sonokinesis** (the release zip): the editor, the `sonokinesis` tool in `tools/`, the script library and
-  the docs. Install its loader into the game with `Install-Sonokinesis.bat` if you want to play levels.
+- **Sonokinesis**: install the app (`Sonokinesis-Setup` from the releases), open its **Create** tab and press
+  **Download the AI tool**. That puts `sonokinesis.exe` in the app's `tools` folder, next to the script library
+  and the docs. Press **Play** in the app once to put Sonokinesis into the game if you want to play levels.
 - **Just Shapes & Beats** on Steam, to play the levels (not needed to build them).
 - An **AI client with MCP support**.
 
 ## Setup
 
-1. Unzip the Sonokinesis release next to this folder (or anywhere).
+1. Install Sonokinesis and download the AI tool from its Create tab (see above).
 2. Double-click `setup.bat` in this folder (or run `.\setup.ps1` in PowerShell). It finds
    `sonokinesis.exe` (or pass `-Sonokinesis C:\path\to\sonokinesis.exe`), writes `.mcp.json`, creates
    `levels/`, and checks the game and the loader.
@@ -46,7 +47,7 @@ Without MCP, an agent that can run commands can use the same tool from the shell
 | play it | `play_in_game`, `game_status`, `game_screenshot` |
 | work with the editor open | `editor`, `editor_screenshot` |
 
-If the Sonokinesis Editor is open on the same level, it reloads every time the agent changes it, so you
+If the Sonokinesis editor is open on the same level, it reloads every time the agent changes it, so you
 can watch the level being built and fix things by hand in between.
 
 ## Examples

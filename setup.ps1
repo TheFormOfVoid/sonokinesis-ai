@@ -15,6 +15,8 @@ function Find-Sonokinesis {
     $onPath = Get-Command sonokinesis -ErrorAction SilentlyContinue
     if ($onPath) { return $onPath.Source }
     $candidates = @(
+        # Downloaded from the Sonokinesis app (its Create tab).
+        (Join-Path $env:LOCALAPPDATA 'Programs\Sonokinesis\tools\sonokinesis.exe'),
         (Join-Path $here '..\sonokinesis\tools\cli\bin\Release\net8.0\sonokinesis.exe'),
         (Join-Path $here '..\Sonokinesis\tools\sonokinesis.exe')
     )
@@ -28,7 +30,8 @@ function Find-Sonokinesis {
 if (-not $Sonokinesis) { $Sonokinesis = Find-Sonokinesis }
 if (-not $Sonokinesis -or -not (Test-Path $Sonokinesis)) {
     Write-Host "Could not find sonokinesis.exe." -ForegroundColor Yellow
-    Write-Host "Download the Sonokinesis release and unzip it next to this folder (it has tools\sonokinesis.exe),"
+    Write-Host "Install the Sonokinesis app and press 'Download the AI tool' on its Create tab (or unzip"
+    Write-Host "Sonokinesis-AI-Tool from the releases next to this folder),"
     Write-Host "or build it from the sonokinesis repository (dotnet build -c Release tools/cli), then run:"
     Write-Host "  .\setup.ps1 -Sonokinesis C:\path\to\sonokinesis.exe"
     exit 1

@@ -2,7 +2,7 @@
 
 You are helping someone make a custom level for Just Shapes & Beats with **Sonokinesis**. You have the
 `sonokinesis` MCP tools (or the `sonokinesis` command line, same commands with dashes). With them you can
-do everything the Sonokinesis Editor does: create a level from a song, place and animate hazards, write
+do everything the Sonokinesis editor does: create a level from a song, place and animate hazards, write
 your own attacks and effects in JavaScript, check the level, look at it as pictures, and play it in
 the game.
 
